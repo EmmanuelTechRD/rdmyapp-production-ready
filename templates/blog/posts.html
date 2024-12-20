@@ -1,0 +1,84 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+
+    Blog - ES.Django.App
+
+{% endblock %}
+
+{% block content %}
+
+    <section id="blog" class="grid place-items-center px-3 py-20">
+
+        <h1 class="mb-14 text-4xl font-bold text-center text-gray-900">
+            Blog | Django Sample App by 
+
+            <a href="https://www.esportfolio.dev" target="_blank">
+                Emmanuel Soto.
+            </a>
+        </h1>
+
+        {% for post in posts %}
+            <div
+                id="post_container"
+                class="flex flex-col bg-white border border-gray-200 rounded-lg shadow max-w-[22rem] sm:max-w-sm md:max-w-2xl mx-2 mb-14"
+            >
+                <div class="relative flex flex-cols-2">
+
+                    <p id="post-{{post.id}}" class="m-6 font-bold text-xl text-gray-800">
+                        {{ post.author }}
+                    </p>
+
+                    <p
+                        id="date"
+                        class="absolute right-0 my-6 px-6 font-normal text-xl text-gray-500"
+                    >
+                        {{ post.published_date|date:"F j, Y" }}
+                    </p>
+
+                </div>
+
+                {% if post.media %} 
+
+                    {% if '.mp4' in post.media.url or '.avi' in post.media.url or '.mov' in post.media.url %}
+
+                        <video controls>
+                            <source 
+                            class="object-cover w-full h-full mt-3 md:mt-0" 
+                            src="{{ post.media.url }}" 
+                            type="{{ video_mime_type }}" 
+                            />
+                        </video>
+                        
+                    {% else %}
+
+                        <img
+                            class="object-cover md:object-contain w-full h-full md:max-w-[600px] md:max-h-[448px]"
+                            src="{{ post.media.url }}"
+                            alt="Foto de publicación: {{ post.title }}"
+                        />
+
+                    {% endif %} 
+
+                {% endif %}
+
+                <div class="flex flex-col justify-between p-4 leading-normal left-0">
+
+                    <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                        {{ post.title }}
+                    </h2>
+
+                    <p class="mb-3 font-normal text-lg text-gray-800 break-words">
+                        {{ post.text_field }}
+                    </p>
+
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </section>
+    
+
+{% endblock %}
