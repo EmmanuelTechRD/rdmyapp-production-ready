@@ -3,9 +3,6 @@ venv
 /myapp/.env
 /media/
 
-# Database
-/db.sqlite3
-
 # Cached Data
 /myapp/__pycache__/
 /myapp/migrations/
