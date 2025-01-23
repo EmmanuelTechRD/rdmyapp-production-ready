@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+
+    App - ES.Django.App
+
+{% endblock %}
+
+{% block content %}
+
+    <section id="app_about_page" class="grid place-items-center px-3 py-20">
+
+        <h1 class="mt-8 mb-14 text-4xl font-bold text-center text-gray-900">
+            App | ES.Django.App
+        </h1>
+
+        <img class="w-[100px] h-auto mx-auto mb-14" src="{% static 'imgs/generic/favicon.png' %}" alt="ES.Django.App logo" />
+
+        <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl">
+            We focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.
+        </p>
+
+    </section>
+    
+
+{% endblock %}

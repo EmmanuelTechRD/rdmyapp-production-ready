@@ -2,26 +2,53 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{% static 'imgs/generic/favicon.png' %}">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+    <head>
 
-    <title>
-        {% block title %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{% static 'imgs/generic/favicon.png' %}">
 
-            ES.Django.App
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
 
-        {% endblock %}
-    </title>
-</head>
-<body>
-    <div id="content">
-        {% block content %}
-        {% endblock %}
-    </div>
-</body>
+        <title>
+            {% block title %}
+
+                ES.Django.App
+
+            {% endblock %}
+        </title>
+
+    </head>
+
+    <body>
+
+        <section id="navbar">
+            
+            {% include 'user/components/navbar.html' %}
+            
+        </section>
+
+        <section id="alerts">
+            
+            {% include 'user/components/alerts.html' %}
+            
+        </section>
+
+        <div id="content">
+            
+            {% block content %}
+            {% endblock %}
+            
+        </div>
+
+        <!-- Main.js -->
+        <script src="{% static 'js/main.js' %}" defer></script>
+
+        <!-- FlowbiteJS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" defer></script>
+
+    </body>
+
 </html>
