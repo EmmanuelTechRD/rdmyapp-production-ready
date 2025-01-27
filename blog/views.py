@@ -1,5 +1,5 @@
-from django.shortcuts import redirect, render
-from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import get_object_or_404, redirect, render
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from . import models as m
@@ -19,13 +19,13 @@ def create_post_view(request):
         form = f.PostForm(request.POST, request.FILES)
         
         if form.is_valid():
-            user = request.user
-            form.cleaned_data['author'] = user.first_name + ' ' + user.last_name
-            
+            user = get_user_model().objects.get(id=request.user.id)
+            form.cleaned_data['author'] = user
             form.save()
             
             messages.success(request, f"Your post has been published.")
             return redirect('post_list')
+        
         else:
             messages.error(request, f"There was an error creating the post.")
                     
@@ -37,7 +37,10 @@ def create_post_view(request):
 @login_required
 def update_post_view(request, pk):
     
-    post = m.Post.objects.get(id=pk)
+    if request.user.is_superuser:
+        post = get_object_or_404(m.Post, id=pk)
+    else:
+        post = get_object_or_404(m.Post, id=pk, author=request.user)
     
     if request.method == 'POST':
         form = f.PostUpdateForm(request.POST, request.FILES, instance=post)
@@ -47,6 +50,7 @@ def update_post_view(request, pk):
             
             messages.success(request, f"Your post has been updated.")
             return redirect('post_list')
+        
         else:
             messages.error(request, f"There was an error updating the post.")
                     
@@ -58,8 +62,11 @@ def update_post_view(request, pk):
 @login_required
 def delete_post_view(request, pk):
     
-    post = m.Post.objects.get(id=pk)
-    
+    if request.user.is_superuser:
+        post = get_object_or_404(m.Post, id=pk)
+    else:
+        post = get_object_or_404(m.Post, id=pk, author=request.user)
+        
     post.delete()
     
     messages.success(request, f"Your post has been deleted.")
