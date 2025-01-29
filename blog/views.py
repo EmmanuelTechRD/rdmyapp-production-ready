@@ -114,10 +114,7 @@ def signup_view(request):
         
         if form.is_valid():
             
-            user = form.save()
-            
-            user.is_active = False
-            user.save()
+            form.save()
             
             messages.success(request, 'Account created successfully!')
             
@@ -130,6 +127,5 @@ def signup_view(request):
 
 # App:
 
-@login_required
 def about_view(request):
     return render(request, 'app/about.html')
