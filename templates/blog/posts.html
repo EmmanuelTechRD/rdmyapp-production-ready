@@ -47,9 +47,10 @@
 
                         <video controls>
                             <source 
-                            class="object-cover w-full h-full mt-3 md:mt-0" 
-                            src="{{ post.media.url }}" 
-                            type="{{ video_mime_type }}" 
+                                class="object-cover w-full h-full mt-3 md:mt-0" 
+                                src="{{ post.media.url }}" 
+                                type="{{ video_mime_type }}" 
+                                preload="metadata"
                             />
                         </video>
                         
@@ -59,6 +60,7 @@
                             class="object-cover md:object-contain w-full h-full md:max-w-[600px] md:max-h-[448px]"
                             src="{{ post.media.url }}"
                             alt="Foto de publicación: {{ post.title }}"
+                            loading="lazy"
                         />
 
                     {% endif %} 
