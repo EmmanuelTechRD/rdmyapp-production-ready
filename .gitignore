@@ -8,3 +8,4 @@ venv
 /myapp/migrations/
 
 /blog/__pycache__/
+/blog/migrations/
