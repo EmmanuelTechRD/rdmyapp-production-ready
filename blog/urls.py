@@ -15,4 +15,5 @@ urlpatterns = [
     
     # App:
     path('about/', views.about_view, name='about'),
+    path('license/', views.license_view, name='mit_license')
 ]

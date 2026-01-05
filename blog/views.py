@@ -129,3 +129,6 @@ def signup_view(request):
 
 def about_view(request):
     return render(request, 'app/about.html')
+
+def license_view(request):
+    return render(request, 'app/mit_license.html')
