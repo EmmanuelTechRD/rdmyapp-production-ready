@@ -6,31 +6,31 @@
 <!-- Navbar Not Logged component -->
 
 <header class="antialiased">
-    <nav class="fixed z-40 w-full bg-white border-b border-gray-200 p-5 md:py-3">
+    <nav class="fixed z-40 w-full bg-slate-950 border-b border-gray-800 p-5 md:py-3">
         <div class="flex flex-wrap justify-between items-center">
 
             <div class="flex justify-start items-center max-md:mx-auto">
                 <a href="{% url 'post_list' %}" class="flex ml-1 mr-4">
                     <img src="{% static 'imgs/generic/favicon.png' %}" class="mr-3 h-8" alt="Logo ES.Django.App" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap">ES.Django.App</span>
+                    <span class="self-center text-2xl text-white font-semibold whitespace-nowrap">ES.Django.App</span>
                 </a>
             </div>
 
             {% if request.user.is_authenticated %}
-                <span class="inline-flex max-md:mt-3 text-sm mx-auto rounded-full bg-green-600 px-4 py-1 font-semibold tracking-wide text-white shadow-md truncate">
+                <span class="inline-flex max-md:mt-3 text-sm mx-auto rounded-full bg-slate-900 px-4 py-1 font-semibold tracking-wide text-white shadow-md truncate">
                     Logged in as {{ request.user.first_name }} {{ request.user.last_name }}
                 </span>
                 
                     {% if request.path == '/' %}
                         <div class="flex items-center lg:order-2 max-md:mt-2.5 max-md:mx-auto max-md:border-t max-md:pt-2.5">
 
-                            <a href="{% url 'create_post' %}" class="inline-flex items-center justify-center text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm sm:text-base px-3 py-1.5 mr-4 focus:outline-none">
+                            <a href="{% url 'create_post' %}" class="inline-flex items-center justify-center text-white bg-slate-900 hover:bg-slate-800 focus:ring-1 focus:ring-gray-300 font-medium rounded-lg text-sm sm:text-base px-3 py-1.5 mr-4 focus:outline-none">
 
                                 Create Post
 
                             </a>
 
-                            <a href="{% url 'logout' %}" class="inline-flex items-center justify-center text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm sm:text-base px-3 py-1.5 mr-4 focus:outline-none">
+                            <a href="{% url 'logout' %}" class="inline-flex items-center justify-center text-white bg-slate-900 hover:bg-slate-800 focus:ring-1 focus:ring-gray-300 font-medium rounded-lg text-sm sm:text-base px-3 py-1.5 mr-4 focus:outline-none">
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open w-5 h-5" viewBox="0 0 16 16">
                                     <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
@@ -45,7 +45,7 @@
 
                 <div class="flex items-center lg:order-2 max-md:mt-2.5 max-md:mx-auto max-md:border-t max-md:pt-2.5">
 
-                    <a href="{% url 'login' %}" class="inline-flex items-center justify-center text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm sm:text-base px-3 py-1.5 mr-4 focus:outline-none">
+                    <a href="{% url 'login' %}" class="inline-flex items-center justify-center text-white bg-slate-900 hover:bg-slate-800 focus:ring-1 focus:ring-gray-300 font-medium rounded-lg text-sm sm:text-base px-3 py-1.5 mr-4 focus:outline-none">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open-fill w-5 h-5" viewBox="0 0 16 16">
                             <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>

@@ -9,21 +9,23 @@
 
 {% block content %}
 
-    <section class="bg-gray-50">
+    <section class="bg-slate-950">
         <div class="py-44 px-4 mx-auto max-w-screen-xl lg:py-28 grid lg:grid-cols-2 gap-8 lg:gap-16">
             <div class="flex flex-col justify-center">
-                <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">Django App Deployed on Heroku and AWS</h1>
-                <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl">This is a Django CRUD App which aims to show the functionality of this Python Framework when deployed on the internet.</p>
-                <a href="{% url 'about' %}" class="text-blue-600 hover:underline font-medium text-lg inline-flex items-center">Read more about our app 
-                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
-                </a>
+                <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Django App Deployed on Heroku and AWS</h1>
+                <p class="mb-6 text-lg font-normal text-white lg:text-xl">This is a Django CRUD App which aims to show the functionality of this Python Framework when deployed on the internet.</p>
+                <span>
+                    <a href="{% url 'about' %}" class="text-white hover:underline font-medium text-lg inline-flex items-center">Read more about our app 
+                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                </span>
             </div>
             <div>
-                <div class="w-full lg:max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow-xl">
+                <div class="w-full lg:max-w-xl p-6 space-y-8 sm:p-8 bg-slate-900 rounded-lg shadow-xl">
 
-                    <h2 class="text-2xl font-bold text-gray-900">
+                    <h2 class="text-2xl font-bold text-white">
                         Sign Up to ES.Django.App
                     </h2>
 
@@ -41,7 +43,7 @@
                             Create an account
                         </button>
 
-                        <div class="text-sm font-medium text-gray-900">
+                        <div class="text-sm font-medium text-white">
                             Registered already? <a href="{% url 'login' %}" class="text-blue-600 hover:underline">Login to your account</a>
                         </div>
 

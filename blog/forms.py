@@ -16,7 +16,7 @@ class PostForm(forms.Form):
         max_length=150,
         widget=forms.TextInput(
             attrs={
-                'class': 'mt-3 mb-8 block w-full md:w-[40rem] p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xl focus:ring-blue-500 focus:border-blue-500',
+                'class': 'mt-3 mb-8 block w-full md:w-[40rem] p-4 text-white border border-slate-600 rounded-lg bg-slate-800 text-xl focus:ring-blue-500',
                 'placeholder': 'Enter a title...'
             }
         )
@@ -27,7 +27,7 @@ class PostForm(forms.Form):
         required=False,
         widget=forms.FileInput(
             attrs={
-                'class': 'mt-3 mb-8 flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100', 
+                'class': 'mt-3 mb-8 flex flex-col items-center justify-center w-full h-64 border-2 border-slate-600 border-dashed rounded-lg cursor-pointer bg-slate-800 hover:bg-gray-100', 
                 'accept': '.jpg,.png,.jpeg,.mp4,.mov'
             }
         ),
@@ -39,7 +39,7 @@ class PostForm(forms.Form):
         max_length=800,
         widget=forms.Textarea(
             attrs={
-                'class': 'mt-3 block p-2.5 w-full text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500',
+                'class': 'mt-3 block p-2.5 w-full text-lg text-white bg-slate-800 rounded-lg border border-slate-600 focus:ring-blue-500',
                 'id': 'text_field',
                 'placeholder': 'Write here...'
             }
@@ -62,19 +62,19 @@ class PostUpdateForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(
                 attrs={
-                    'class': 'mt-3 mb-8 block w-full md:w-[40rem] p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xl focus:ring-blue-500 focus:border-blue-500',
+                    'class': 'mt-3 mb-8 block w-full md:w-[40rem] p-4 text-white border border-slate-600 rounded-lg bg-slate-800 text-xl focus:ring-blue-500',
                     'placeholder': 'Enter a title...'
                 }
             ),
             'media': forms.FileInput(
                 attrs={
-                    'class': 'mt-3 mb-8 flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100', 
+                    'class': 'mt-3 mb-8 flex flex-col items-center justify-center w-full h-64 border-2 border-slate-600 border-dashed rounded-lg cursor-pointer bg-slate-800 hover:bg-gray-100', 
                     'accept': '.jpg,.png,.jpeg,.mp4,.mov'
                 }
             ),
             'text_field': forms.Textarea(
                 attrs={
-                    'class': 'mt-3 block p-2.5 w-full text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500',
+                    'class': 'mt-3 block p-2.5 w-full text-lg text-white bg-slate-800 rounded-lg border border-slate-600 focus:ring-blue-500',
                     'id': 'text_field',
                     'placeholder': 'Write here...'
                 }
@@ -89,7 +89,7 @@ class LoginForm(forms.Form):
         label=('Your email'),
         widget=forms.EmailInput(
             attrs={
-                'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2 mb-4',
+                'class': 'bg-slate-800 border border-slate-600 text-white text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 mt-2 mb-4',
                 'placeholder': 'name@domain.com'
             }
         ),
@@ -101,7 +101,7 @@ class LoginForm(forms.Form):
         label=('Your password'),
         widget=forms.PasswordInput(
             attrs={
-                'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2 mb-4',
+                'class': 'bg-slate-800 border border-slate-600 text-white text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 mt-2 mb-4',
                 'placeholder': '••••••••'
             }
         ),
@@ -116,7 +116,7 @@ class SignUpForm(forms.Form):
         label=('Your name'),
         widget=forms.TextInput(
             attrs={
-                'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2 mb-4',
+                'class': 'bg-slate-800 border border-slate-600 text-white text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 mt-2 mb-4',
                 'placeholder': 'John'
             }
         ),
@@ -129,7 +129,7 @@ class SignUpForm(forms.Form):
         label=('Your surname'),
         widget=forms.TextInput(
             attrs={
-                'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2 mb-4',
+                'class': 'bg-slate-800 border border-slate-600 text-white text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 mt-2 mb-4',
                 'placeholder': 'Doe'
             }
         ),
@@ -142,7 +142,7 @@ class SignUpForm(forms.Form):
         label=('Your email'),
         widget=forms.EmailInput(
             attrs={
-                'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2 mb-4',
+                'class': 'bg-slate-800 border border-slate-600 text-white text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 mt-2 mb-4',
                 'placeholder': 'name@domain.com'
             }
         ),
@@ -155,7 +155,7 @@ class SignUpForm(forms.Form):
         label=('Your password'),
         widget=forms.PasswordInput(
             attrs={
-                'class': 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2 mb-4',
+                'class': 'bg-slate-800 border border-slate-600 text-white text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 mt-2 mb-4',
                 'placeholder': '••••••••'
             }
         ),
