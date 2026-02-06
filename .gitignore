@@ -9,3 +9,6 @@ venv
 
 /blog/__pycache__/
 /blog/migrations/
+
+/moneynest/__pycache__/
+/moneynest/migrations/

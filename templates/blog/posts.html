@@ -82,7 +82,7 @@
                         {# Post actions #}
                             <div class="flex flex-wrap justify-center my-3 md:mb-1">
                     
-                                <a href="{% url 'update_post' post.pk %}" class="w-46 md:w-56 h-11 max-md:mx-auto md:mr-5 text-amber-600 border border-amber-600 hover:bg-amber-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-amber-300 font-medium rounded-full text-md p-2.5 text-center inline-flex justify-center items-center">
+                                <a href="{% url 'update_post' post.pk %}" class="w-46 md:w-56 h-11 max-md:mx-auto md:mr-5 text-white border border-white hover:bg-amber-600 hover:text-white focus:ring-2 focus:outline-none focus:ring-amber-300 font-medium rounded-full text-md p-2.5 text-center inline-flex justify-center items-center">
 
                                     <svg class="w-6 h-6 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
@@ -92,7 +92,7 @@
                 
                                 </a>
                 
-                                <button type="button" data-modal-target="delete-post-modal-{{ post.pk }}" data-modal-toggle="delete-post-modal-{{ post.pk }}" class="w-46 mb-3 md:w-56 h-11 max-md:mx-auto md:mr-5 text-red-700 border border-red-700 hover:bg-red-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-full text-md p-2.5 text-center inline-flex justify-center items-center">
+                                <button type="button" data-modal-target="delete-post-modal-{{ post.pk }}" data-modal-toggle="delete-post-modal-{{ post.pk }}" class="w-46 mb-3 md:w-56 h-11 max-md:mx-auto md:mr-5 text-white border border-white hover:bg-red-700 hover:text-white focus:ring-2 focus:outline-none focus:ring-red-300 font-medium rounded-full text-md p-2.5 text-center inline-flex justify-center items-center">
                 
                                     <svg class="w-6 h-6 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">                          
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>            
@@ -110,7 +110,7 @@
                                         <!-- Modal content -->
                                         <div class="relative bg-slate-900 rounded-lg shadow">
                                             <!-- Modal header -->
-                                            <div class="flex items-start justify-between p-5 border-b rounded-t">
+                                            <div class="flex items-start justify-between p-5 border-b border-gray-800 rounded-t">
                                                 <h3 class="text-xl font-semibold">
                                                     Delete Post
                                                 </h3>

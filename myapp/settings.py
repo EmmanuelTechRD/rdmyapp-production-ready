@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     
     # Local apps
     'blog',
+    'moneynest',
     
     # Third-party apps
     'storages',
